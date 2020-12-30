@@ -1,6 +1,6 @@
 {
   "name": "aidongyang-ui",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "private": false,
   "description": "基于 vue-cli4 的组件库",
   "main": "lib/ai-ui.umd.min.js",
@@ -16,10 +16,10 @@
     "lib": "vue-cli-service build --target lib --name ai-ui --dest lib src/index.js"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
   },
   "devDependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",

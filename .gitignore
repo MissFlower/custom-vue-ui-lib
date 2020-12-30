@@ -24,13 +24,13 @@ pnpm-debug.log*
 
 # 以下是新增的
 # 打包时要忽略目录和指定文件
-# examples/
-# public/
-# vue.config.js
-# babel.config.js
-# .eslintrc.js
-# .browserslistrc
-# .eslintignore
-# jsconfig.json
+examples/
+public/
+vue.config.js
+babel.config.js
+.eslintrc.js
+.browserslistrc
+.eslintignore
+jsconfig.json
 *.map
 *.html
