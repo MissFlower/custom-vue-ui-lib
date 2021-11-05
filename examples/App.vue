@@ -12,29 +12,46 @@
     <AiButton type="danger">我的按钮</AiButton>
     <AiButton type="info">我的按钮</AiButton>
     <AiInput v-model="value" @input.native="handleInput" />
-    <AiButton type="success" appendToBody @click="open">我的按钮</AiButton>
-    <AiToast :visible.sync="visible" :message="message" appendToBody />
+    <AiButton
+      type="success"
+      appendToBody
+      @click="open"
+    >toast</AiButton>
+    <AiToast
+      :visible.sync="visible"
+      :message="message"
+      appendToBody
+    />
+    <AiPagination
+      background
+      :current-page.sync="pageIndex"
+      @current-change="currentChange"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
-  data() {
-    return {
-      value: '哈哈',
-      visible: false,
-      message: '我是提示框Total的内容消息！'
-    }
-  },
-  methods: {
-    handleInput(e) {
-      console.log(e)
-    },
-    open() {
-      this.visible = true
-    }
-  }
+	name: 'App',
+	data() {
+		return {
+			value: '哈哈',
+			visible: false,
+			message: '我是提示框Total的内容消息！',
+			pageIndex: 2
+		}
+	},
+	methods: {
+		handleInput(e) {
+			console.log(e)
+		},
+		open() {
+			this.visible = true
+		},
+		currentChange(value) {
+			console.log(`当前页面改变了：第${this.pageIndex}页`)
+		}
+	}
 }
 </script>
 

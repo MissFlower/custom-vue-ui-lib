@@ -10,8 +10,9 @@ import Vue from 'vue'
 import App from './App.vue'
 
 import AiUi from '../src'
+import '../packages/theme-chalk/src/index.scss'
 Vue.use(AiUi, {
-  size: 14
+	size: 14
 })
 
 // // 1.引入自定义的 toast插件
@@ -22,5 +23,5 @@ Vue.use(AiUi, {
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App)
+	render: h => h(App)
 }).$mount('#app')

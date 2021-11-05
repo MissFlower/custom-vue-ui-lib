@@ -23,100 +23,47 @@
 
 <script>
 export default {
-  name: 'AiButton',
-  props: {
-    type: {
-      type: String,
-      default: 'default'
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    },
-    appendToBody: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data() {
-    return {
-      name: ''
-    }
-  },
-  computed: {
-    buttonDisabled() {
-      return this.disabled
-    }
-  },
-  mounted() {
-    if (this.appendToBody) {
-      document.body.appendChild(this.$el)
-    }
-  },
-  destroyed() {
-    // if appendToBody is true, remove DOM node after destroy
-    if (this.appendToBody && this.$el && this.$el.parentNode) {
-      this.$el.parentNode.removeChild(this.$el)
-    }
-  },
-  methods: {
-    handleClick(evt) {
-      this.$emit('click', evt)
-    }
-  }
+	name: 'AiButton',
+	props: {
+		type: {
+			type: String,
+			default: 'default'
+		},
+		disabled: {
+			type: Boolean,
+			default: false
+		},
+		appendToBody: {
+			type: Boolean,
+			default: false
+		}
+	},
+	data() {
+		return {
+			name: ''
+		}
+	},
+	computed: {
+		buttonDisabled() {
+			return this.disabled
+		}
+	},
+	mounted() {
+		if (this.appendToBody) {
+			document.body.appendChild(this.$el)
+		}
+	},
+	destroyed() {
+		// if appendToBody is true, remove DOM node after destroy
+		if (this.appendToBody && this.$el && this.$el.parentNode) {
+			this.$el.parentNode.removeChild(this.$el)
+		}
+	},
+	methods: {
+		handleClick(evt) {
+			this.$emit('click', evt)
+		}
+	}
 }
 </script>
-
-<style lang="scss">
-.ai-button {
-  display: inline-block;
-    line-height: 1;
-    white-space: nowrap;
-    cursor: pointer;
-    background: #fff;
-    border: 1px solid #dcdfe6;
-    color: #606266;
-    -webkit-appearance: none;
-    text-align: center;
-    box-sizing: border-box;
-    outline: none;
-    margin: 0;
-    transition: .1s;
-    font-weight: 500;
-    -moz-user-saiect: none;
-    -webkit-user-saiect: none;
-    -ms-user-saiect: none;
-    padding: 12px 20px;
-    font-size: 14px;
-    border-radius: 4px
-}
-.ai-button+.ai-button {
-  margin-left: 10px;
-}
-.ai-button--primary {
-  color: #fff;
-  background-color: #409eff;
-  border-color: #409eff;
-}
-.ai-button--success {
-  color: #fff;
-  background-color: #67c23a;
-  border-color: #67c23a;
-}
-.ai-button--info {
-  color: #fff;
-  background-color: #909399;
-  border-color: #909399;
-}
-.ai-button--warning {
-  color: #fff;
-  background-color: #e6a23c;
-  border-color: #e6a23c;
-}
-.ai-button--danger {
-  color: #fff;
-  background-color: #f56c6c;
-  border-color: #f56c6c;
-}
-</style>
 
