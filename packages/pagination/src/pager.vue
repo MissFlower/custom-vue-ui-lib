@@ -63,7 +63,7 @@ export default {
 	computed: {
 		showPrevMore() {
 			let showPrevMore = false
-			// 要想showPrevMore=true必须要当前的数大于页码数量的一半
+			// 要想showPrevMore=true必须要当前的数大于页码按钮数量(不包括prev和next按钮)的一半
 			if (this.pageCount > this.pagerCount && this.currentPage > this.pagerCount - (this.pagerCount - 1) / 2) {
 				showPrevMore = true
 			}
